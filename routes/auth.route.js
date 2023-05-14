@@ -29,7 +29,7 @@ router.get("/user/student/:id", getSingleUserByStudentID);
 // auth
 router.route("/profile/update").put(isAuthenticatedUser, updateProfile);
 
-// admin
+// admin routes
 router
   .route("/admin/user/:id")
   .put(isAuthenticatedUser, authorizeRoleAdmin, updateUserRole)
